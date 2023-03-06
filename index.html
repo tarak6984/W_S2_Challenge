@@ -262,8 +262,6 @@
           }
         })
       })
-    } catch (err) { console.error(err.stack) }
-    try {
       phoneNumInput.oninput = evt => {
         normalized.textContent = normalizePhoneNumber(evt.target.value)
       }
