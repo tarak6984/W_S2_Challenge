@@ -160,15 +160,15 @@
       // 🌟 HINT: you need to keep track of the total number of throws, as well as how many sixes in a row
     }
 
-    // 🧪 TESTS, do not work below this line
-    // 🧪 TESTS, do not work below this line
-    // 🧪 TESTS, do not work below this line
+    // 🧪 TESTS, do not make any changes below this line ===================
+    // 🧪 TESTS, do not make any changes below this line ===================
+    // 🧪 TESTS, do not make any changes below this line ===================
+    globalThis.challengeVersion = 1
     globalThis.profileActivation = profileActivation
     globalThis.mineSweeper = mineSweeper
     globalThis.booleanize = booleanize
     globalThis.scrub = scrub
     globalThis.normalizePhoneNumber = normalizePhoneNumber
-    globalThis.diceRolls = diceRolls
 
     try {
       runTests('CHALLENGE 1 - profileActivation', profileActivation, [
@@ -221,30 +221,30 @@
         [["987654321"], "type a 10-digit number"],
         [["98765432100"], "type a 10-digit number"],
         [["987654321x"], "invalid phone number"],
+        [["x876543210"], "invalid phone number"],
+        [["98765x3210"], "invalid phone number"],
       ])
-    } catch (err) { console.error(err.stack) }
-    console.log('\nCHALLENGE 6 does not have auto tests')
-    function runTests(testName, func, tests) {
-      let results = []
-      tests.forEach(test => {
-        const originalArgsList = _.cloneDeep(test[0])
-        const argsList = test[0]
-        const expected = test[1]
-        const actual = func.apply(null, argsList)
-        results.push([argsList, expected, actual, originalArgsList])
-      })
-      console.log('\n' + testName)
-      if (results.every(result => _.isEqual(result[1], result[2]))) console.log('\t✅ All tests pass')
-      else if (results.every(result => !_.isEqual(result[1], result[2]))) console.log('\t❌ All tests fail')
-      else results.forEach((result, idx) => {
-        if (_.isEqual(result[1], result[2])) console.log(`\t✅ Test ${idx + 1} passes`)
-        else console.log(`\t❌ Test ${idx + 1} fails:
+      console.log('\nCHALLENGE 6 does not have auto tests')
+      function runTests(testName, func, tests) {
+        let results = []
+        tests.forEach(test => {
+          const originalArgsList = _.cloneDeep(test[0])
+          const argsList = test[0]
+          const expected = test[1]
+          const actual = func.apply(null, argsList)
+          results.push([argsList, expected, actual, originalArgsList])
+        })
+        console.log('\n' + testName)
+        if (results.every(result => _.isEqual(result[1], result[2]))) console.log('\t✅ All tests pass')
+        else if (results.every(result => !_.isEqual(result[1], result[2]))) console.log('\t❌ All tests fail')
+        else results.forEach((result, idx) => {
+          if (_.isEqual(result[1], result[2])) console.log(`\t✅ Test ${idx + 1} passes`)
+          else console.log(`\t❌ Test ${idx + 1} fails:
         ${func.name}(${result[3].map(JSON.stringify)})
         👉 should return ${JSON.stringify(result[1])}
         👉 but returns ${JSON.stringify(result[2])}`)
-      })
-    }
-    try {
+        })
+      }
       const gridElems = [Array.from(row1.children), Array.from(row2.children), Array.from(row3.children)]
       const squares = ["🟥", "🟦"]
       let grid = [[], [], []]
