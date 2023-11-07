@@ -3,6 +3,39 @@
 
 <head>
   <title>Web Sprint 2 Challenge</title>
+
+  <script id="challenge">
+    // 👉 CHALLENGE 1
+    function toggleProfileActivation(profile, reason) {
+
+    }
+
+    // 👉 CHALLENGE 2
+    function mineSweeper(grid, x, y) {
+      
+    }
+
+    // 👉 CHALLENGE 3
+    function booleanize(obj) {
+
+    }
+
+    // 👉 CHALLENGE 4
+    function scrub(text, forbidden) {
+ 
+    }
+
+    // 👉 CHALLENGE 5
+    function normalizePhoneNumber(num) {
+
+    }
+
+    // 👉 CHALLENGE 6 (bonus, NOT graded)
+    function diceRolls() {
+ 
+    }
+    </script>
+
   <style>
     .widget {
       padding: 0 0 0.5rem 0.65rem;
@@ -64,118 +97,20 @@
 
   <!-- The first script tag loads a library called lodash that helps with testing -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-  <script id="challenge">
-    // In CHALLENGES 1-6 you will write JavaScript functions
-
-    // ❗ Functions are scaffolded for you, but are missing their parameters and bodies
-    // ❗ Do not rename the functions provided, and do not create any other script tags
-    // ❗ Do not modify the location of the two script tags in this document
-    // ❗ Debug properly using the Console
-
-    // 👉 CHALLENGE 1
-    function profileActivation() {
-      // 🧠 profileActivation takes two arguments, profile and reason, which are an object and a string respectively
-      //  The reason arg is only used -and therefore required- to deactivate profiles, not to activate them
-      //  The profile arg has an `active` property holding a Boolean value
-      //    * If profile is active, profileActivation deactivates it and writes a `reason` prop holding the reason
-      //    * If profile is inactive, profileActivation activates it and deletes the `reason` prop from the object
-      //    * In both cases the updated profile object is returned
-      // 🧠 Edge cases:
-      //    * If the profile is inactive but its `reason` prop is **missing**, return the string "confirm status manually"
-      //    * If the profile is active but it has a `reason` prop, return the string "confirm status manually"
-      //    * If the profile is **missing** an `active` prop, return the string "impossible to ascertain status"
-      // 🌟 HINT: to confirm the existence of a prop, check that its value is not undefined
-    }
-
-    // 👉 CHALLENGE 2
-    function mineSweeper() {
-      // 🧠 mineSweeper takes a grid as its first argument, and coordinates x and y as the second and third args
-      //  The grid is an array of arrays in the following format: [["🟥","🟦","🟥"],["🟦","🟥","🟥"],["🟥","🟦","🟦"]]
-      //  Each subarray is a row of the grid, the first subarray being the top row:
-      //  [
-      //    ["🟥", "🟦", "🟥"],
-      //    ["🟦", "🟥", "🟥"],
-      //    ["🟥", "🟦", "🟦"]
-      //  ]
-      //  The coordinates x and y are numbers: either 1 or 2 or 3
-      //    * An x = 1 and y = 1 means the top-left square
-      //    * An x = 3 and y = 1 means the top-right square
-      //    * An x = 3 and y = 3 means the bottom-right square
-      //  Red squares are mines and blue squares are safe
-      //    * If mineSweeper is called with such coordinates that the player lands on red, return the string "🟥 💀"
-      //    * If the player lands on blue, return the string "🟦 🥳"
-      // 🧠 Edge cases:
-      //    * If the x or y coordinates are under 1 or over 3, return the string "invalid coordinates"
-    }
-
-    // 👉 CHALLENGE 3
-    function booleanize() {
-      // 🧠 booleanize takes an object as its single argument, which can have any number of properties
-      // Loop over the properties and then return the object, after applying the following transformations:
-      //    * If a value is the number zero, it must be transformed into the Boolean false
-      //    * If a value is the number one, it must be transformed into the Boolean true
-      //    * If a value is null, the whole key-value pair must be deleted from the object
-      // 🧠 Edge cases:
-      //    * If a property name exceeds 9 characters, return the string "shorten all prop names to 9 chars or less"
-      // 🌟 HINT: careful not to perform any unintended changes on the object
-    }
-
-    // 👉 CHALLENGE 4
-    function scrub() {
-      // 🧠 scrub takes a string "text" as its first argument, and an array of forbidden words "forbidden" as its second
-      // Any word in the text included in the array of forbidden words is replaced with a word of equal length but made of lowcase "x"
-      // The scrubbed text is then returned from the function, as seen in the examples below
-      // No punctuation is used in the text
-      // 🧠 Examples of usage:
-      //    scrub("out of the silent planet", ["of", "silent"]) // returns "out xx the xxxxxx planet"
-      //    scrub("the ghost of the navigator", ["the"]) // returns "xxx ghost of xxx navigator"
-      //    scrub("lost somewhere in time", []) // returns "lost somewhere in time"
-      //    scrub("aces high", ["high", "aces", "hearts"]) // returns "xxxx xxxx"
-      //    scrub("", ["high", "aces""]) // returns ""
-      // 🌟 HINT: useful array methods to use are `push`, `indexOf`, `split`, `join`
-    }
-
-    // 👉 CHALLENGE 5
-    function normalizePhoneNumber() {
-      // 🧠 normalizePhoneNumber takes a string as its only argument, representing a ten-digit number
-      // The function returns a string formatted as seen below
-      // 🧠 Examples of usage:
-      // normalizePhoneNumber("9876543210") // returns "(987) 654-3210"
-      // normalizePhoneNumber("1111111111") // returns "(111) 111-1111"
-      // 🧠 Edge cases:
-      //   * If the argument is of an incorrect length, return the string "type a 10-digit number"
-      //   * If the argument is of the correct length but any character is not an integer between 0 and 9, return "invalid phone number"
-      // 🌟 HINT: instead of looping over the number's digits, loop backwards over a template "(XXX) XXX-XXXX"
-      // 🌟 HINT: at each iteration, if the current character is an "X", replace it with the result of popping a digit from the number
-      // 🌟 HINT: if you'd rather loop forwards, use `shift` instead of `pop`
-    }
-
-    // 👉 CHALLENGE 6 (bonus, NOT graded)
-    function diceRolls() {
-      // 🧠 diceRolls takes no arguments and returns a number
-      // The function throws a six-sided dice until 3 sixes in a row are obtained
-      // The number of throws it took to obtain that third-in-a-row six is then returned from the function
-      // 🌟 HINT: research using `Math.random` to obtain a number from 1 to 6
-      // 🌟 HINT: use `while(true)` to throw the dice indefinitely, but avoid an infinite loop by making sure to break out eventually
-      // 🌟 HINT: you need to keep track of the total number of throws, as well as how many sixes in a row
-    }
-
+  <script>
     // 🧪 TESTS, do not make any changes below this line ===================
     // 🧪 TESTS, do not make any changes below this line ===================
     // 🧪 TESTS, do not make any changes below this line ===================
     globalThis.challengeVersion = 1
-    globalThis.profileActivation = profileActivation
+    globalThis.toggleProfileActivation = toggleProfileActivation
     globalThis.mineSweeper = mineSweeper
     globalThis.booleanize = booleanize
     globalThis.scrub = scrub
     globalThis.normalizePhoneNumber = normalizePhoneNumber
 
     try {
-      runTests('CHALLENGE 1 - profileActivation', profileActivation, [
-        [[{}], 'impossible to ascertain status'],
-        [[{ active: true, reason: '' }], 'confirm status manually'],
-        [[{ active: true, reason: 'because' }], 'confirm status manually'],
-        [[{ active: false }], 'confirm status manually'],
+      runTests('CHALLENGE 1 - toggleProfileActivation', toggleProfileActivation, [
+        [[{ active: true }], 'confirm status manually'],
         [[{ active: true }, 'because'], { active: false, reason: 'because' }],
         [[{ active: false, reason: 'because' }], { active: true }],
       ])
