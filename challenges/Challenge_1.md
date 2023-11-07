@@ -24,9 +24,9 @@ function toggleProfileActivation(profile, reason)
 The profile is considered active if the `active` prop is true and inactive if the `active` prop is false. If the `active` prop is false, a `reason` prop must be present (i.e., not undefined)
 
 ### Requirements
-   - If the input profile is **active**, set it to **inactive** and assign the provided `reason` to the profile. The updated profile should be returned.
-   - If the input profile is **inactive**, set it to **active** and remove the `reason` property from the profile. The updated profile should be returned.
-   - If a profile passed in is active and no `reason` is provided, return `"confirm status manually"` and do not modify the profile.
+   1. If the input profile is **active**, set it to **inactive** and assign the provided `reason` to the profile. The updated profile should be returned.
+   2. If the input profile is **inactive**, set it to **active** and remove the `reason` property from the profile. The updated profile should be returned.
+   3. If a profile passed in is active and no `reason` is provided, return `"confirm status manually"` and do not modify the profile.
 
 ## Examples and Expected Outputs
 
