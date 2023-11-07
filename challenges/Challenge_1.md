@@ -28,9 +28,9 @@ The profile is considered active if the `active` prop is true and inactive if th
    2. If the input profile is **inactive**, set it to **active** and remove the `reason` property from the profile. The updated profile should be returned.
    3. If a profile passed in is active and no `reason` is provided, return `"confirm status manually"` and do not modify the profile.
 
-## Examples and Expected Outputs
+### Examples and Expected Outputs
 
-### Example 1: Activating a Profile
+#### Example 1: Activating a Profile
 ```javascript
 let testProfile = {
   active: false,
@@ -46,7 +46,7 @@ console.log(result);
 { active: true }
 ```
 
-### Example 2: Deactivating a Profile
+#### Example 2: Deactivating a Profile
 ```javascript
 let testProfile = {
   active: true,
@@ -62,7 +62,7 @@ console.log(result);
  { active: false, reason: "Not logged in for 30 days"}
  ```
 
-### Example 3: Missing Reason on Active Profile
+#### Example 3: Missing Reason on Active Profile
 ```javascript
 let testProfile = {
   active: true,
