@@ -16,7 +16,7 @@ git clone [your-repo-url-here]
 
 You can get your repo url from GitHub by clicking on the green "<> Code" button and clicking on the copy button for the url.
 
-!(Image of a GitHub repo page with the green code button open.)[./images/github-url.png]
+![Image of a GitHub repo page with the green code button open.](./images/github-url.png)
 
 ### Preparing Your Environment
 Once you have your files on your machine, open the `index.html` file in two programs:
