@@ -1,17 +1,76 @@
-// 🧠 mineSweeper takes a grid as its first argument, and coordinates x and y as the second and third args
-//  The grid is an array of arrays in the following format: [["🟥","🟦","🟥"],["🟦","🟥","🟥"],["🟥","🟦","🟦"]]
-//  Each subarray is a row of the grid, the first subarray being the top row:
-//  [
-//    ["🟥", "🟦", "🟥"],
-//    ["🟦", "🟥", "🟥"],
-//    ["🟥", "🟦", "🟦"]
-//  ]
-//  The coordinates x and y are numbers: either 1 or 2 or 3
-//    * An x = 1 and y = 1 means the top-left square
-//    * An x = 3 and y = 1 means the top-right square
-//    * An x = 3 and y = 3 means the bottom-right square
-//  Red squares are mines and blue squares are safe
-//    * If mineSweeper is called with such coordinates that the player lands on red, return the string "🟥 💀"
-//    * If the player lands on blue, return the string "🟦 🥳"
-// 🧠 Edge cases:
-//    * If the x or y coordinates are under 1 or over 3, return the string "invalid coordinates"
+# Challenge 2: MineSweeper Game
+
+### Objective
+Develop the `mineSweeper` function that evaluates a player's move in a grid-based minefield game. The function should analyze the grid position based on provided coordinates and determine if the player has landed on a safe spot or a mine.
+
+### Function Signature
+```javascript
+function mineSweeper(grid, x, y)
+```
+
+### Parameters
+- **grid:** An array of arrays representing the game grid.
+- **x:** The x-coordinate (horizontal position) in the grid.
+- **y:** The y-coordinate (vertical position) in the grid.
+
+### Grid Structure
+The grid consists of a 3x3 array of strings, where:
+- "🟥" represents a mine.
+- "🟦" represents a safe spot.
+
+Example:
+```javascript
+[ 
+  ["🟥", "🟦", "🟥"],
+  ["🟦", "🟥", "🟥"],
+  ["🟥", "🟦", "🟦"]
+]
+```
+
+The grid is interpreted with `x` and `y` coordinates ranging from 1 to 3.
+- `x = 1` and `y = 1` represents the top-left square.
+- `x = 3` and `y = 1` represents the top-right square.
+- `x = 3` and `y = 3` represents the bottom-right square.
+
+## Requirements
+1. If the coordinates land on a red square ("🟥"), return `"🟥 💀"`.
+2. If the coordinates land on a blue square ("🟦"), return `"🟦 🥳"`.
+3. If `x` _or_ `y` is less than 1 or greater than 3, return `"invalid coordinates"`.
+
+### Examples
+
+#### Example 1: Landing on a Mine
+```javascript
+let grid = [["🟥", "🟦", "🟥"], ["🟦", "🟥", "🟥"], ["🟥", "🟦", "🟦"]];
+let result = mineSweeper(grid, 1, 1);
+console.log(result); 
+```
+
+#### Expected Output
+```
+"🟥 💀"
+```
+
+#### Example 2: Landing on a Safe Spot
+```javascript
+let grid = [["🟥", "🟦", "🟥"], ["🟦", "🟥", "🟥"], ["🟥", "🟦", "🟦"]];
+let result = mineSweeper(grid, 2, 3);
+console.log(result); 
+```
+
+#### Expected Output
+```
+"🟦 🥳"
+```
+
+#### Example 3: Invalid Coordinates
+```javascript
+let grid = [["🟥", "🟦", "🟥"], ["🟦", "🟥", "🟥"], ["🟥", "🟦", "🟦"]];
+let result = mineSweeper(grid, 4, 1);
+console.log(result);
+```
+
+#### Expected Output
+```
+"invalid coordinates"
+```

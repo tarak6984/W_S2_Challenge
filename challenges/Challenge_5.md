@@ -1,36 +1,46 @@
-      // 🧠 normalizePhoneNumber takes a string as its only argument, representing a ten-digit number
-      // The function returns a string formatted as seen below
-      // 🧠 Examples of usage:
-      // normalizePhoneNumber("9876543210") // returns "(987) 654-3210"
-      // normalizePhoneNumber("1111111111") // returns "(111) 111-1111"
-      // 🧠 Edge cases:
-      //   * If the argument is of an incorrect length, return the string "type a 10-digit number"
-      //   * If the argument is of the correct length but any character is not an integer between 0 and 9, return "invalid phone number"
-      // 🌟 HINT: instead of looping over the number's digits, loop backwards over a template "(XXX) XXX-XXXX"
-      // 🌟 HINT: at each iteration, if the current character is an "X", replace it with the result of popping a digit from the number
-      // 🌟 HINT: if you'd rather loop forwards, use `shift` instead of `pop`
-      if (num.length !== 10) return "type a 10-digit number"
-      const template = '(XXX) XXX-XXXX'.split('')
-      const digits = num.split('')
-      let invalidDigit = false
-      for (let idx = template.length - 1; idx >= 0; idx--) {
-        if (template[idx] === 'X') {
-          const digit = digits.pop()
-          if (
-            digit !== '0' &&
-            digit !== '1' &&
-            digit !== '2' &&
-            digit !== '3' &&
-            digit !== '4' &&
-            digit !== '5' &&
-            digit !== '6' &&
-            digit !== '7' &&
-            digit !== '8' &&
-            digit !== '9'
-          ) {
-            return "invalid phone number"
-          }
-          template[idx] = digit
-        }
-      }
-      return template.join('')
+# Challenge 5: Normalize Phone Number
+
+### Objective
+Create the `normalizePhoneNumber` function that takes a string representing a ten-digit number and returns it formatted in a specific phone number format.
+
+### Function Signature
+```javascript
+function normalizePhoneNumber(num)
+```
+
+### Parameters
+- **num:** A string representing a ten-digit phone number.
+
+### Requirements
+1. Format the input string `num` into the phone number format: "(XXX) XXX-XXXX".
+2. If the input `num` is not exactly ten digits long, return the string "type a 10-digit number".
+3. If the input `num` contains any characters that are not integers between 0 and 9, return "invalid phone number".
+
+### Examples
+
+#### Example 1
+```javascript
+let result = normalizePhoneNumber("9876543210");
+console.log(result);
+```
+Expected Output:
+```javascript
+"(987) 654-3210"
+```
+
+#### Example 2
+```javascript
+let result = normalizePhoneNumber("1111111111");
+console.log(result);
+```
+Expected Output:
+```javascript
+"(111) 111-1111"
+```
+
+### Edge Cases
+- Ensure that the function accurately checks for the length of the input string and validates each character.
+
+### Hints
+- Consider using a template "(XXX) XXX-XXXX" and loop backwards, replacing 'X' with digits from the input number.
+- To iterate forward, use `shift` instead of `pop` when processing the digits.

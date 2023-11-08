@@ -1,28 +1,73 @@
-     // 🧠 scrub takes a string "text" as its first argument, and an array of forbidden words "forbidden" as its second
-      // Any word in the text included in the array of forbidden words is replaced with a word of equal length but made of lowcase "x"
-      // The scrubbed text is then returned from the function, as seen in the examples below
-      // No punctuation is used in the text
-      // 🧠 Examples of usage:
-      //    scrub("out of the silent planet", ["of", "silent"]) // returns "out xx the xxxxxx planet"
-      //    scrub("the ghost of the navigator", ["the"]) // returns "xxx ghost of xxx navigator"
-      //    scrub("lost somewhere in time", []) // returns "lost somewhere in time"
-      //    scrub("aces high", ["high", "aces", "hearts"]) // returns "xxxx xxxx"
-      //    scrub("", ["high", "aces""]) // returns ""
-      // 🌟 HINT: useful array methods to use are `push`, `indexOf`, `split`, `join`
-      if (!text.length || !forbidden.length) return text
-      const words = text.split(' ')
-      const result = []
-      for (let idx = 0; idx < words.length; idx++) {
-        const word = words[idx]
-        let idxForbidden = forbidden.indexOf(word)
-        if (idxForbidden > -1) {
-          let sub = ''
-          for (let char in forbidden[idxForbidden]) {
-            sub += 'x'
-          }
-          result.push(sub)
-        } else {
-          result.push(word)
-        }
-      }
-      return result.join(' ')
+# Challenge 4: Scrub Forbidden Words
+
+### Objective
+Develop the `scrub` function that takes a string of text and an array of forbidden words. The function will replace any forbidden word in the text with a string of lowercase "x" characters, each "x" replacing one letter of the forbidden word. The modified text is then returned from the function.
+
+### Function Signature
+```javascript
+function scrub(text, forbidden)
+```
+
+### Parameters
+- **text:** A string representing the text to be scrubbed.
+- **forbidden:** An array of strings, each a forbidden word to be replaced in the text.
+
+### Requirements
+1. Replace each word in `text` that is included in the `forbidden` array with a string of "x" characters of equal length to the forbidden word.
+2. Ensure no punctuation is used in the text.
+3. If `text` is empty or there are no forbidden words, return the original text.
+
+### Examples
+
+#### Example 1
+```javascript
+let result = scrub("out of the silent planet", ["of", "silent"]);
+console.log(result);
+```
+Expected Output:
+```javascript
+"out xx the xxxxxx planet"
+```
+
+#### Example 2
+```javascript
+let result = scrub("the ghost of the navigator", ["the"]);
+console.log(result);
+```
+Expected Output:
+```javascript
+"xxx ghost of xxx navigator"
+```
+
+#### Example 3
+```javascript
+let result = scrub("lost somewhere in time", []);
+console.log(result);
+```
+Expected Output:
+```javascript
+"lost somewhere in time"
+```
+
+#### Example 4
+```javascript
+let result = scrub("aces high", ["high", "aces", "hearts"]);
+console.log(result);
+```
+Expected Output:
+```javascript
+"xxxx xxxx"
+```
+
+#### Example 5
+```javascript
+let result = scrub("", ["high", "aces"]);
+console.log(result);
+```
+Expected Output:
+```javascript
+""
+```
+
+### Hint
+Utilize array methods like `push`, `indexOf`, `split`, and `join` to effectively transform the text.

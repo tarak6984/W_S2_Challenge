@@ -1,22 +1,60 @@
-      // 🧠 booleanize takes an object as its single argument, which can have any number of properties
-      // Loop over the properties and then return the object, after applying the following transformations:
-      //    * If a value is the number zero, it must be transformed into the Boolean false
-      //    * If a value is the number one, it must be transformed into the Boolean true
-      //    * If a value is null, the whole key-value pair must be deleted from the object
-      // 🧠 Edge cases:
-      //    * If a property name exceeds 9 characters, return the string "shorten all prop names to 9 chars or less"
-      // 🌟 HINT: careful not to perform any unintended changes on the object
-      for (let key in obj) {
-        if (key.length > 9) {
-          return "shorten all prop names to 9 chars or less"
-        }
-        if (obj[key] === null) {
-          delete obj[key]
-        }
-        if (obj[key] === 0) {
-          obj[key] = false
-        } else if (obj[key] === 1) {
-          obj[key] = true
-        }
-      }
-      return obj
+# Challenge 3: Booleanize Object
+
+### Objective
+Develop the `booleanize` function so it transforms an object's properties based on the criteria listed under Requirements. This function will loop over each property in the object and apply certain transformations to its values, while also handling edge cases related to property names.
+
+### Function Signature
+```javascript
+function booleanize(obj)
+```
+
+### Parameters
+- **obj:** An object with any number of properties.
+
+### Requirements
+1. Transform the number zero (`0`) into the boolean `false`.
+2. Transform the number one (`1`) into the boolean `true`.
+3. If a value is `null`, delete the entire key-value pair from the object.
+4. If any property name exceeds 9 characters, return the string `"shorten all prop names to 9 chars or less"`.
+
+### Maintain Original Object Structure
+- Ensure that no unintended changes are made to the object's structure or other properties.
+
+### Examples
+
+#### Example 1
+```javascript
+let obj = {
+  keyZero: 0,
+  keyOne: 1,
+  keyNull: null,
+  keyTwo: 2
+};
+
+let result = booleanize(obj);
+console.log(result);
+```
+Expected Output:
+```javascript
+{
+  keyZero: false,
+  keyOne: true,
+  keyTwo: 2
+}
+```
+
+#### Example 2
+```javascript
+let obj = {
+  veryLongPropertyName: 0,
+  keyOne: 1
+};
+
+let result = booleanize(obj);
+console.log(result);
+```
+Expected Output:
+```javascript
+"shorten all prop names to 9 chars or less"
+```
+- Remember not to modify the structure or properties of the object unless specified in the requirements.
