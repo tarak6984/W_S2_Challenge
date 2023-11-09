@@ -70,4 +70,8 @@ Expected Output:
 ```
 
 ### Hint
-Utilize array methods like `push`, `indexOf`, `split`, and `join` to effectively transform the text.
+Utilize array methods like `push`, `split`, `indexOf`, and `join` to effectively transform the text.
+
+### Canvas References
+
+[Basic Array Methods](https://bloomtech.instructure.com/courses/2785/modules/items/690462)

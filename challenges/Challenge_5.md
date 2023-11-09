@@ -13,8 +13,7 @@ function normalizePhoneNumber(num)
 
 ### Requirements
 1. Format the input string `num` into the phone number format: "(XXX) XXX-XXXX".
-2. If the input `num` is not exactly ten digits long, return the string "type a 10-digit number".
-3. If the input `num` contains any characters that are not integers between 0 and 9, return "invalid phone number".
+2. You can assume that all entries will be exactly 10 digits long.
 
 ### Examples
 
@@ -43,4 +42,3 @@ Expected Output:
 
 ### Hints
 - Consider using a template "(XXX) XXX-XXXX" and loop backwards, replacing 'X' with digits from the input number.
-- To iterate forward, use `shift` instead of `pop` when processing the digits.

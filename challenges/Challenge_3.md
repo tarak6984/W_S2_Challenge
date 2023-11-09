@@ -57,4 +57,12 @@ Expected Output:
 ```javascript
 "shorten all prop names to 9 chars or less"
 ```
-- Remember not to modify the structure or properties of the object unless specified in the requirements.
+
+### Canvas References
+[Objects](https://bloomtech.instructure.com/courses/2785/modules/items/690416)
+[Arrays](https://bloomtech.instructure.com/courses/2785/modules/items/690423)
+[Basic Looping](https://bloomtech.instructure.com/courses/2785/modules/items/690435)
+[Falsiness](https://bloomtech.instructure.com/courses/2784/modules/items/690467)
+[Conditional Code](https://bloomtech.instructure.com/courses/2784/modules/items/690479)
+
+
