@@ -11,7 +11,7 @@ function diceRolls()
 ### Parameters
 - The function does not take any arguments.
 
-### Requirements
+## Requirements
 1. Simulate rolling a six-sided die.
 2. Continue rolling until three consecutive rolls result in a six.
 3. Return the total number of rolls it took to achieve three consecutive sixes.

@@ -11,7 +11,7 @@ function normalizePhoneNumber(num)
 ### Parameters
 - **num:** A string representing a ten-digit phone number.
 
-### Requirements
+## Requirements
 1. Format the input string `num` into the phone number format: "(XXX) XXX-XXXX".
 2. You can assume that all entries will be exactly 10 digits long.
 
@@ -42,3 +42,7 @@ Expected Output:
 
 ### Hints
 - Consider using a template "(XXX) XXX-XXXX" and loop backwards, replacing 'X' with digits from the input number.
+
+## Canvas References
+[Arrays](https://bloomtech.instructure.com/courses/2785/pages/arrays?module_item_id=690423)
+[Basic Array Methods](https://bloomtech.instructure.com/courses/2785/modules/items/690462)

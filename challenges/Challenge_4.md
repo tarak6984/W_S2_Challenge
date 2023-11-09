@@ -12,7 +12,7 @@ function scrub(text, forbidden)
 - **text:** A string representing the text to be scrubbed.
 - **forbidden:** An array of strings, each a forbidden word to be replaced in the text.
 
-### Requirements
+## Requirements
 1. Replace each word in `text` that is included in the `forbidden` array with a string of "x" characters of equal length to the forbidden word.
 2. Ensure no punctuation is used in the text.
 3. If `text` is empty or there are no forbidden words, return the original text.
@@ -73,5 +73,4 @@ Expected Output:
 Utilize array methods like `push`, `split`, `indexOf`, and `join` to effectively transform the text.
 
 ### Canvas References
-
 [Basic Array Methods](https://bloomtech.instructure.com/courses/2785/modules/items/690462)

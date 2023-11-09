@@ -11,7 +11,7 @@ function booleanize(obj)
 ### Parameters
 - **obj:** An object with any number of properties.
 
-### Requirements
+## Requirements
 1. Transform the number zero (`0`) into the boolean `false`.
 2. Transform the number one (`1`) into the boolean `true`.
 3. If a value is `null`, delete the entire key-value pair from the object.
