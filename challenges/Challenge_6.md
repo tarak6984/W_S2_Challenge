@@ -22,7 +22,7 @@ function diceRolls()
 - Keep track of the total number of rolls (`throws`) and the consecutive number of sixes (`counter`).
 - Break out of the loop once three consecutive sixes are rolled to avoid an infinite loop.
 
-### Example and Expected Output
+### Examples
 
 #### Example
 ```javascript
