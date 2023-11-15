@@ -44,5 +44,5 @@ Expected Output:
 - Consider using a template "(XXX) XXX-XXXX" and loop backwards, replacing 'X' with digits from the input number.
 
 ## Canvas References
-[Arrays](https://bloomtech.instructure.com/courses/2785/pages/arrays?module_item_id=690423)
-[Basic Array Methods](https://bloomtech.instructure.com/courses/2785/modules/items/690462)
+- [Arrays](https://bloomtech.instructure.com/courses/2785/pages/arrays?module_item_id=690423)
+- [Basic Array Methods](https://bloomtech.instructure.com/courses/2785/modules/items/690462)
