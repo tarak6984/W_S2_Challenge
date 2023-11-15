@@ -12,13 +12,13 @@ function booleanize(obj)
 - **obj:** An object with any number of properties.
 
 ## Requirements
-1. Transform the number zero (`0`) into the boolean `false`.
-2. Transform the number one (`1`) into the boolean `true`.
+1. Transform any value of zero (`0`) into the boolean `false`.
+2. Transform any value of one (`1`) into the boolean `true`.
 3. If a value is `null`, delete the entire key-value pair from the object.
-4. If any property name exceeds 9 characters, return the string `"shorten all prop names to 9 chars or less"`.
+4. If any _property_ name exceeds 9 characters, return the string `"shorten all prop names to 9 chars or less"`.
 
 ### Maintain Original Object Structure
-- Ensure that no unintended changes are made to the object's structure or other properties.
+- Ensure no unintended changes are made to the object's structure or other properties.
 
 ### Examples
 
