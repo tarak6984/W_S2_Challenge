@@ -3,7 +3,7 @@
 ### Objective
 Develop the `booleanize` function so it transforms an object's properties based on the criteria listed (see requirements below). This function will loop over each property in the object and apply certain transformations to its values, while also handling edge cases related to property names.
 
-### Function Signature
+### Function
 ```javascript
 function booleanize(obj)
 ```
