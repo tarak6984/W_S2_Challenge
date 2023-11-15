@@ -33,7 +33,7 @@ For each challenge, read the instructions within the challenge link below and wr
   - [Challenge 2](./challenges/Challenge_2.md)
   - [Challenge 3](./challenges/Challenge_3.md)
   - [Challenge 4](./challenges/Challenge_4.md)
-  - [Challenge 5](./challenges/Challenge_5.md)
+  - [Challenge 5 (optional)](./challenges/Challenge_5.md)
   - [Challenge 6 (optional)](./challenges/Challenge_6.md)
 
 ### Testing Your Code
