@@ -76,5 +76,5 @@ console.log(result);
 ```
 
 ### Canvas References
-[Arrays](https://bloomtech.instructure.com/courses/2785/modules/items/690423)
-[Basic Looping](https://bloomtech.instructure.com/courses/2785/modules/items/690435)
+- [Arrays](https://bloomtech.instructure.com/courses/2785/modules/items/690423)
+- [Basic Looping](https://bloomtech.instructure.com/courses/2785/modules/items/690435)

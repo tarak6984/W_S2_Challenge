@@ -80,5 +80,5 @@ console.log(result);
 
 
 ### Canvas References
-[Objects](https://bloomtech.instructure.com/courses/2785/modules/items/690416)
+- [Objects](https://bloomtech.instructure.com/courses/2785/modules/items/690416)
 
