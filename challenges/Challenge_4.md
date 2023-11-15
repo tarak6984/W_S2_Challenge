@@ -3,12 +3,12 @@
 ### Objective
 Develop the `scrub` function that takes a string of text and an array of forbidden words. The function will replace any forbidden word in the text with a string of lowercase "x" characters, each "x" replacing one letter of the forbidden word. The modified text is then returned from the function.
 
-### Function Signature
+### Function
 ```javascript
 function scrub(text, forbidden)
 ```
 
-### Parameters
+#### Parameters
 - **text:** A string representing the text to be scrubbed.
 - **forbidden:** An array of strings, each a forbidden word to be replaced in the text.
 

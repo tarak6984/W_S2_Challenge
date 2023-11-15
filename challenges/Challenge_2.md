@@ -3,12 +3,12 @@
 ### Objective
 Develop the `mineSweeper` function that evaluates a player's move in a grid-based minefield game. The function should analyze the grid position based on provided coordinates and determine if the player has landed on a safe spot or a mine.
 
-### Function Signature
+### Function
 ```javascript
 function mineSweeper(grid, x, y)
 ```
 
-### Parameters
+#### Parameters
 - **grid:** An array of arrays representing the game grid.
 - **x:** The x-coordinate (horizontal position) in the grid.
 - **y:** The y-coordinate (vertical position) in the grid.

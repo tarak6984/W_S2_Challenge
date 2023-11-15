@@ -3,12 +3,12 @@
 ### Objective
 Develop the `diceRolls` function that simulates the rolling of a six-sided die. It should continue rolling until it gets three sixes in a row, and then return the total number of rolls it took to achieve this.
 
-### Function Signature
+### Function 
 ```javascript
 function diceRolls()
 ```
 
-### Parameters
+#### Parameters
 - The function does not take any arguments.
 
 ## Requirements

@@ -8,7 +8,7 @@ Develop the `booleanize` function so it transforms an object's properties based 
 function booleanize(obj)
 ```
 
-### Parameters
+#### Parameters
 - **obj:** An object with any number of properties.
 
 ## Requirements

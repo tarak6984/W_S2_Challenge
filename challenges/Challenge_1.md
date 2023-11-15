@@ -9,7 +9,7 @@ Implement the toggleProfileActivation function to manage the activation status o
 ```
 function toggleProfileActivation(profile, reason)
 ```
-### Parameters
+#### Parameters
 - profile: An object representing a user profile.
 - reason (optional): A string describing the reason for inactivity.
 

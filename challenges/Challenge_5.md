@@ -3,12 +3,12 @@
 ### Objective
 Create the `normalizePhoneNumber` function that takes a string representing a ten-digit number and returns it formatted in a specific phone number format.
 
-### Function Signature
+### Function
 ```javascript
 function normalizePhoneNumber(num)
 ```
 
-### Parameters
+#### Parameters
 - **num:** A string representing a ten-digit phone number.
 
 ## Requirements
