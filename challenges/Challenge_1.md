@@ -5,7 +5,7 @@ A company's website has many user profiles. These profiles can either be active 
 ### Objective 
 Implement the toggleProfileActivation function to manage the activation status of user profiles on a company's website. This function will toggle a profile's active status and handle reasons for inactivity.
 
-### Function Signature
+### Function
 ```
 function toggleProfileActivation(profile, reason)
 ```
