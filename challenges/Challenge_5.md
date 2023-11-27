@@ -1,4 +1,4 @@
-# Challenge 5: Normalize Phone Number
+# Challenge 5: Normalize Phone Number (OPTIONAL)
 
 ### Objective
 Create the `normalizePhoneNumber` function that takes a string representing a ten-digit number and returns it formatted in a specific phone number format.

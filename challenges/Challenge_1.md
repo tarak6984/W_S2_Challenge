@@ -1,13 +1,13 @@
-# Challenge 1: Profile Activation Toggle
+# Challenge 1: Profile Activation
 
 A company's website has many user profiles. These profiles can either be active (i.e., they can use the website) or inactive. A profile can be set to inactive for a variety of reasons, and the company wants to have the reasons recorded for analytical purposes. If an inactive profile is set back to active, the reason for the inactivity is no longer needed and can be removed.
 
 ### Objective 
-Implement the toggleProfileActivation function to manage the activation status of user profiles on a company's website. This function will toggle a profile's active status and handle reasons for inactivity.
+Implement the profileActivation function to manage the activation status of user profiles on a company's website. This function will toggle a profile's active status and handle reasons for inactivity.
 
 ### Function
 ```
-function toggleProfileActivation(profile, reason)
+function profileActivation(profile, reason)
 ```
 #### Parameters
 - profile: An object representing a user profile.
@@ -37,7 +37,7 @@ let testProfile = {
   reason: "Not logged in for 30 days"
 };
 
-let result = toggleProfileActivation(testProfile);
+let result = profileActivation(testProfile);
 console.log(result); 
 ```
 
@@ -53,7 +53,7 @@ let testProfile = {
   reason: undefined
 };
 
-let result = toggleProfileActivation(testProfile, "Not logged in for 30 days");
+let result = profileActivation(testProfile, "Not logged in for 30 days");
 console.log(result);
 ```
 
@@ -69,7 +69,7 @@ let testProfile = {
   reason: undefined
 };
 
-let result = toggleProfileActivation(testProfile);
+let result = profileActivation(testProfile);
 console.log(result); 
 ```
 

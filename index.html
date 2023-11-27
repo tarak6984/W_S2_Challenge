@@ -6,7 +6,7 @@
 
   <script id="challenge">
     // 👉 CHALLENGE 1
-    function toggleProfileActivation(profile, reason) {
+    function profileActivation(profile, reason) {
 
     }
 
@@ -102,14 +102,14 @@
     // 🧪 TESTS, do not make any changes below this line ===================
     // 🧪 TESTS, do not make any changes below this line ===================
     globalThis.challengeVersion = 1
-    globalThis.toggleProfileActivation = toggleProfileActivation
+    globalThis.profileActivation = profileActivation
     globalThis.mineSweeper = mineSweeper
     globalThis.booleanize = booleanize
     globalThis.scrub = scrub
     globalThis.normalizePhoneNumber = normalizePhoneNumber
 
     try {
-      runTests('CHALLENGE 1 - toggleProfileActivation', toggleProfileActivation, [
+      runTests('CHALLENGE 1 - profileActivation', profileActivation, [
         [[{ active: true }], 'confirm status manually'],
         [[{ active: true }, 'because'], { active: false, reason: 'because' }],
         [[{ active: false, reason: 'because' }], { active: true }],
