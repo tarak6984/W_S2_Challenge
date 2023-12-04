@@ -1,41 +1,11 @@
+<!--
+  👇 Challenge 1 starts on line 72 of this document. YOU GOT THIS!! 😃
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>Web Sprint 2 Challenge</title>
-
-  <script id="challenge">
-    // 👉 CHALLENGE 1
-    function profileActivation(profile, reason) {
-
-    }
-
-    // 👉 CHALLENGE 2
-    function mineSweeper(grid, x, y) {
-      
-    }
-
-    // 👉 CHALLENGE 3
-    function booleanize(obj) {
-
-    }
-
-    // 👉 CHALLENGE 4
-    function scrub(text, forbidden) {
- 
-    }
-
-    // 👉 CHALLENGE 5 (bonus, NOT graded)
-    function normalizePhoneNumber(num) {
-
-    }
-
-    // 👉 CHALLENGE 6 (bonus, NOT graded)
-    function diceRolls() {
- 
-    }
-    </script>
-
   <style>
     .widget {
       padding: 0 0 0.5rem 0.65rem;
@@ -67,7 +37,7 @@
 
 <body>
   <h1>Web Sprint 2 Challenge </h1>
-  <p>❗ See the last script tag for instructions on completing your Challenge</p>
+  <p>👇 Find your challenges in the script tag with the id of "challenge"</p>
   <!-- widgets start -->
   <section class="widget">
     <p>Click on a square! (this widget uses the mineSweeper function)</p>
@@ -95,9 +65,40 @@
   </form>
   <!-- widgets end -->
 
-  <!-- The first script tag loads a library called lodash that helps with testing -->
+  <!-- The following script loads from the Internet a library called Lodash that helps with testing -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-  <script>
+  <!-- The following script contains your challenges, and the tests that display in your console -->
+  <script id="challenge">
+    // 👉 CHALLENGE 1
+    function profileActivation(profile, reason) {
+
+    }
+
+    // 👉 CHALLENGE 2
+    function mineSweeper(grid, x, y) {
+
+    }
+
+    // 👉 CHALLENGE 3
+    function booleanize(obj) {
+
+    }
+
+    // 👉 CHALLENGE 4
+    function scrub(text, forbidden) {
+
+    }
+
+    // 👉 CHALLENGE 5 (bonus, NOT graded)
+    function normalizePhoneNumber(num) {
+
+    }
+
+    // 👉 CHALLENGE 6 (bonus, NOT graded)
+    function diceRolls() {
+
+    }
+
     // 🧪 TESTS, do not make any changes below this line ===================
     // 🧪 TESTS, do not make any changes below this line ===================
     // 🧪 TESTS, do not make any changes below this line ===================
@@ -106,7 +107,6 @@
     globalThis.mineSweeper = mineSweeper
     globalThis.booleanize = booleanize
     globalThis.scrub = scrub
-    globalThis.normalizePhoneNumber = normalizePhoneNumber
 
     try {
       runTests('CHALLENGE 1 - profileActivation', profileActivation, [
