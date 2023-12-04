@@ -107,7 +107,7 @@
     globalThis.booleanize = booleanize
     globalThis.scrub = scrub
 
-    if (typeof module === undefined) {
+    if (typeof module === 'undefined') {
       runTests('CHALLENGE 1 - profileActivation', profileActivation, [
         [[{ active: true }], 'confirm status manually'],
         [[{ active: true }, 'because'], { active: false, reason: 'because' }],
