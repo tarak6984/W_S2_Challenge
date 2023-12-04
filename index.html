@@ -107,7 +107,7 @@
     globalThis.booleanize = booleanize
     globalThis.scrub = scrub
 
-    try {
+    if (typeof module === undefined) {
       runTests('CHALLENGE 1 - profileActivation', profileActivation, [
         [[{ active: true }], 'confirm status manually'],
         [[{ active: true }, 'because'], { active: false, reason: 'because' }],
@@ -192,7 +192,7 @@
       phoneNumInput.oninput = evt => {
         normalized.textContent = normalizePhoneNumber(evt.target.value)
       }
-    } catch (err) { console.error(err.stack) }
+    }
   </script>
 </body>
 
