@@ -7,8 +7,8 @@ Below you will find step-by-step instructions to help you get setup and complete
 
 ## 1. Setup Instructions
 
-### Cloning the Repository
-To get started, clone the repository to your local machine. Cloning creates a local copy of the project on your computer. To clone your repository, open your terminal or Git BASH and execute:
+### Forking & Cloning the Repository
+To get started, **hit the fork button**, and then clone the repository to your local machine. Cloning creates a local copy of the project on your computer. To clone your repository, open your terminal or Git BASH and execute:
 
 ```
 git clone [your-repo-url-here]
