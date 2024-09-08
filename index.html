@@ -6,33 +6,97 @@
   <script id="challenge">
     // 👉 CHALLENGE 1
     function profileActivation(profile, reason) {
-
-    }
+  if (reason) {
+    profile.active = false;
+    profile.reason = reason;
+    return profile;
+  } else if (!profile.active) {
+    profile.active = true;
+    delete profile.reason;
+    return profile;
+  } else {
+    return "confirm status manually";
+  }
+}
 
     // 👉 CHALLENGE 2
+    // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
+  // Convert 1-based coordinates to 0-based
+  const adjustedX = x - 1;
+  const adjustedY = y - 1;
 
-    }
+  // Check if the coordinates are out of bounds
+  if (adjustedX < 0 || adjustedY < 0 || adjustedX >= grid.length || adjustedY >= grid[0].length) {
+    return "invalid coordinates";
+  }
+
+  // Check the value at the given coordinates and return the appropriate message
+  const cellValue = grid[adjustedX][adjustedY];
+  console.log(`Checking cell [${adjustedX}][${adjustedY}] with value "${cellValue}"`); // Debugging line
+  if (cellValue === "🟥") {
+    return "🟥 💀";
+  } else if (cellValue === "🟦") {
+    return "🟦 🥳";
+  } else {
+    return "invalid coordinates";
+  }
+}
+
+
+
+
 
     // 👉 CHALLENGE 3
     function booleanize(obj) {
-
+  const result = {};
+  
+  for (const [key, value] of Object.entries(obj)) {
+    // Check if the property name length is greater than 9
+    if (key.length > 9) {
+      return "shorten all prop names to 9 chars or less";
     }
+    
+    // Exclude properties with `null` values
+    if (value === null) {
+      continue;
+    }
+
+    // Convert values 1 and 0 to boolean, others remain unchanged
+    if (value === 1) result[key] = true;
+    else if (value === 0) result[key] = false;
+    else result[key] = value;
+  }
+  
+  return result;
+}
+
+
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
-
-    }
+  let result = text;
+  forbidden.forEach(word => {
+    const regex = new RegExp(`\\b${word}\\b`, 'gi');
+    result = result.replace(regex, 'x'.repeat(word.length));
+  });
+  return result;
+}
 
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
-
-    }
+  const cleaned = num.replace(/\D/g, '');
+  const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+  if (match) {
+    return `(${match[1]}) ${match[2]}-${match[3]}`;
+  }
+  return num;
+}
 
     // 👉 CHALLENGE 6 (bonus, NOT graded)
     function diceRolls() {
-
-    }
+  return Array.from({ length: 10 }, () => Math.floor(Math.random() * 6) + 1);
+}
 
     // 🧪 DO NOT make any changes below this line ===================
     globalThis.challengeVersion = 1
