@@ -32,7 +32,7 @@
   }
 
   // Check the value at the given coordinates and return the appropriate message
-  const cellValue = grid[adjustedX][adjustedY];
+  const cellValue = grid[adjustedY][adjustedX];
   console.log(`Checking cell [${adjustedX}][${adjustedY}] with value "${cellValue}"`); // Debugging line
   if (cellValue === "🟥") {
     return "🟥 💀";
